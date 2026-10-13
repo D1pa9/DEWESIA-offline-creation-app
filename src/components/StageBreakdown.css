@@ -1,0 +1,132 @@
+.dw-breakdown-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(33, 38, 31, 0.45);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 50;
+  animation: dw-fade-in 200ms ease-out both;
+}
+
+.dw-breakdown-panel {
+  background: var(--color-bg);
+  width: 100%;
+  max-width: var(--max-width);
+  max-height: 86vh;
+  overflow-y: auto;
+  border-radius: 22px 22px 0 0;
+  padding: 24px 20px 36px;
+  box-shadow: 0 -8px 32px rgba(0,0,0,0.18);
+}
+
+@media (min-width: 720px) {
+  .dw-breakdown-overlay { align-items: center; }
+  .dw-breakdown-panel { border-radius: var(--radius-lg); max-height: 80vh; }
+}
+
+.dw-breakdown-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.dw-breakdown-header h2 {
+  font-size: 1.3rem;
+}
+
+.dw-icon-btn {
+  background: none;
+  border: none;
+  color: var(--color-ink-soft);
+  padding: 6px;
+  border-radius: 999px;
+}
+
+.dw-icon-btn:hover { background: var(--color-pine-soft); color: var(--color-pine-dark); }
+
+.dw-breakdown-intro {
+  color: var(--color-ink-soft);
+  font-size: 0.9rem;
+  margin: 8px 0 20px;
+  line-height: 1.5;
+}
+
+.dw-breakdown-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dw-breakdown-item {
+  display: flex;
+  gap: 14px;
+  padding-bottom: 22px;
+  position: relative;
+}
+
+.dw-breakdown-thread {
+  flex-shrink: 0;
+  width: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.dw-breakdown-thread::before {
+  content: '';
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--color-pine);
+  margin-top: 4px;
+  z-index: 1;
+}
+
+.dw-breakdown-item:not(:last-child) .dw-breakdown-thread {
+  position: relative;
+}
+
+.dw-breakdown-item:not(:last-child) .dw-breakdown-thread::after {
+  content: '';
+  position: absolute;
+  top: 13px;
+  bottom: -22px;
+  left: 50%;
+  width: 1.5px;
+  transform: translateX(-50%);
+  background: var(--color-border);
+}
+
+.dw-breakdown-content { flex: 1; padding-top: 0; }
+
+.dw-breakdown-label {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 4px;
+}
+
+.dw-breakdown-stage-name {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: var(--color-pine-dark);
+  background: var(--color-pine-soft);
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.dw-breakdown-question {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  font-style: italic;
+}
+
+.dw-breakdown-value {
+  font-size: 0.95rem;
+  color: var(--color-ink);
+  line-height: 1.5;
+}

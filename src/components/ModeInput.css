@@ -1,0 +1,116 @@
+.dw-input-screen {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 28px 0 32px;
+  animation: dw-fade-in 300ms ease-out both;
+}
+
+.dw-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  align-self: flex-start;
+  background: none;
+  border: none;
+  color: var(--color-ink-soft);
+  font-size: 0.9rem;
+  padding: 8px 4px;
+  margin-bottom: 18px;
+}
+
+.dw-back-btn:hover { color: var(--color-pine-dark); }
+
+.dw-input-mode-name {
+  font-size: 1.5rem;
+  margin-bottom: 6px;
+}
+
+.dw-input-prompt {
+  color: var(--color-ink-soft);
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.dw-input-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.dw-textarea {
+  width: 100%;
+  padding: 16px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  color: var(--color-ink);
+  font-size: 1rem;
+  line-height: 1.5;
+  resize: vertical;
+  min-height: 160px;
+  box-shadow: var(--shadow-card);
+}
+
+.dw-textarea:focus-visible {
+  border-color: var(--color-pine);
+}
+
+.dw-input-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.dw-char-count {
+  font-size: 0.78rem;
+  color: var(--color-muted);
+  font-family: var(--font-mono);
+}
+
+.dw-primary-btn {
+  background: var(--color-pine);
+  color: #fff;
+  border: none;
+  padding: 13px 28px;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: 0 4px 14px rgba(47, 111, 94, 0.25);
+  transition: background 150ms ease, transform 150ms ease;
+}
+
+.dw-primary-btn:hover {
+  background: var(--color-pine-dark);
+  transform: translateY(-1px);
+}
+
+.dw-primary-btn:active {
+  transform: translateY(0);
+}
+
+.dw-primary-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.dw-secondary-btn {
+  background: var(--color-surface);
+  color: var(--color-ink);
+  border: 1px solid var(--color-border);
+  padding: 12px 20px;
+  border-radius: 999px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  transition: border-color 150ms ease, transform 150ms ease;
+}
+
+.dw-secondary-btn:hover {
+  border-color: var(--color-pine);
+  color: var(--color-pine-dark);
+}

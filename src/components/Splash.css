@@ -1,0 +1,54 @@
+.dw-splash {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--color-bg);
+}
+
+.dw-splash-mark {
+  text-align: center;
+  animation: dw-splash-in 900ms ease-out both;
+}
+
+.dw-splash-thread {
+  display: block;
+  width: 46px;
+  height: 3px;
+  margin: 0 auto 18px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--color-pine), var(--color-amber));
+  transform-origin: left center;
+  animation: dw-thread-grow 900ms cubic-bezier(.4,0,.2,1) both;
+}
+
+.dw-splash-title {
+  font-size: 2.6rem;
+  letter-spacing: 0.04em;
+  color: var(--color-ink);
+}
+
+.dw-splash-tagline {
+  margin-top: 10px;
+  font-family: var(--font-body);
+  color: var(--color-ink-soft);
+  font-size: 1rem;
+  letter-spacing: 0.01em;
+}
+
+@keyframes dw-splash-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes dw-thread-grow {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dw-splash-mark, .dw-splash-thread {
+    animation: none !important;
+  }
+}

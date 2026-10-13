@@ -1,0 +1,45 @@
+.dw-processing {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  text-align: center;
+  gap: 18px;
+}
+
+.dw-processing-ring {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.dw-processing-ring span {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 3px solid var(--color-pine-soft);
+  border-top-color: var(--color-pine);
+  animation: dw-spin 900ms linear infinite;
+}
+
+.dw-processing-title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  color: var(--color-ink);
+}
+
+.dw-processing-message {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}
+
+@keyframes dw-spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dw-processing-ring span { animation: none; }
+}

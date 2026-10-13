@@ -1,0 +1,55 @@
+.dw-privacy-block {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 20px 18px;
+  margin-bottom: 16px;
+}
+
+.dw-privacy-lead {
+  font-size: 0.98rem;
+  line-height: 1.55;
+  color: var(--color-ink);
+  margin-bottom: 14px;
+}
+
+.dw-privacy-list {
+  margin: 0 0 12px;
+  padding-left: 20px;
+  color: var(--color-ink-soft);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.dw-privacy-note {
+  font-size: 0.82rem;
+  color: var(--color-muted);
+  font-family: var(--font-mono);
+}
+
+.dw-privacy-subhead {
+  font-size: 1.05rem;
+  margin-bottom: 6px;
+}
+
+.dw-danger-btn {
+  color: var(--color-danger);
+  border-color: rgba(177, 72, 52, 0.35);
+}
+
+.dw-danger-btn:hover {
+  border-color: var(--color-danger);
+  color: var(--color-danger);
+  background: rgba(177, 72, 52, 0.06);
+}
+
+.dw-confirm-row {
+  display: flex;
+  gap: 10px;
+}
+
+.dw-cleared-note {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: var(--color-pine-dark);
+}

@@ -1,0 +1,137 @@
+:root {
+  /* Color tokens */
+  --color-bg: #FBF9F4;
+  --color-surface: #FFFFFF;
+  --color-ink: #21261F;
+  --color-ink-soft: #565B4F;
+  --color-muted: #8B8778;
+  --color-border: #E7E2D5;
+  --color-pine: #2F6F5E;
+  --color-pine-dark: #234F42;
+  --color-pine-soft: #E4EEEA;
+  --color-amber: #C98A3E;
+  --color-amber-soft: #F7E9D5;
+  --color-danger: #B14834;
+
+  /* Typography */
+  --font-display: ui-serif, Georgia, 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', serif;
+  --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+
+  /* Layout */
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --shadow-card: 0 1px 2px rgba(33, 38, 31, 0.04), 0 8px 24px rgba(33, 38, 31, 0.06);
+  --max-width: 640px;
+}
+
+* { box-sizing: border-box; }
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  margin: 0;
+  color: var(--color-ink);
+}
+
+p { margin: 0; }
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+textarea, input {
+  font-family: inherit;
+}
+
+a { color: var(--color-pine-dark); }
+
+::selection {
+  background: var(--color-pine-soft);
+}
+
+:focus-visible {
+  outline: 2.5px solid var(--color-pine);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+.dw-app-root {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.dw-empty-result {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  text-align: center;
+  min-height: 60vh;
+  padding: 24px;
+  color: var(--color-ink-soft);
+}
+
+.dw-error-boundary {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  min-height: 100vh;
+  text-align: center;
+  padding: 24px;
+}
+
+.dw-app-shell {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.dw-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
